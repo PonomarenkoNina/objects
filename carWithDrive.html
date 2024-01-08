@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>carWithDrive</title>
+    <script>
+      var fiat = {
+        make: "Fiat",
+        model: "500",
+        year: 1957,
+        color: "Medium Blue",
+        passengers: 2,
+        convertible: false,
+        mileage: 88000,
+        drive: function () {
+          alert.log("Zoom zoom!");
+        },
+      };
+      // Функції в об'єктах - методи - об'єктно-орієнтований термін
+      // fiat.drive();  - визов методу drive об'єкта fiat
+
+      var fiat = {
+        make: "Fiat",
+        model: "500",
+        year: 1957,
+        color: "Medium Blue",
+        passengers: 2,
+        convertible: false,
+        mileage: 88000,
+        started: false,
+
+        start: function () {
+          started = true;
+        },
+
+        stop: function () {
+          started = false;
+        },
+
+        drive: function () {
+          if (started) {
+            alert("Zoom zoom!");
+          } else {
+            alert("You need to start the engine first.");
+          }
+        },
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Додавання поведінки в об'єкти</h1>
+    <h2>Додаємо функцію прямо в об'єкт</h2>
+    <h3>Вдосконалення метода drive</h3>
+  </body>
+</html>
