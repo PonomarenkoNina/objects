@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>This</title>
+    <script>
+      // Exersise 1
+      var song = {
+        name: "Walk This Way",
+        artist: "Run-D.M.C.",
+        minutes: 4,
+        seconds: 3,
+        genre: "80s",
+        playing: false,
+
+        play: function () {
+          if (!this.playing) {
+            this.playing = true;
+            console.log("Playing " + this.name + " by " + this.artist);
+          }
+        },
+        pause: function () {
+          if (this.playing) {
+            this.playing = false;
+          }
+        },
+      };
+
+      song.play();
+      song.pause();
+
+      // Console JS: Playing Walk This Way by Run-D.M.C.
+
+      // Exersise 2
+      var eightBall = {
+        index: 0,
+        advice: ["yes", "no", "maybe", "not a chance"],
+        shake: function () {
+          this.index = this.index + 1;
+          if (this.index >= this.advice.length) {
+            this.index = 0;
+          }
+        },
+        look: function () {
+          return this.advice[this.index];
+        },
+      };
+      eightBall.shake();
+      console.log(eightBall.look());
+    </script>
+  </head>
+  <body>
+    <h1>Ключове слово this</h1>
+    <h2>Даний об'єкт, з яким ми працюємо</h2>
+  </body>
+</html>
